@@ -22,12 +22,12 @@ def loadXMLFile(filename):
 def read_pressure(filename):
   doc = loadXMLFile(filename)
   p=doc.find(".//Misc")
-  return p.find("Pressure").get("Avg")
+  return float(p.find("Pressure").get("Avg"))
 
 def read_temperature(filename):
   doc = loadXMLFile(filename)
   p=doc.find(".//Misc")
-  return p.find("Temperature").get("Mean") 
+  return float(p.find("Temperature").get("Mean") )
 
 def conf_to_xyz(filename):
   XMLDoc=loadXMLFile(filename)
