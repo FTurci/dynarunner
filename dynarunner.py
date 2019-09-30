@@ -21,7 +21,7 @@ def loadXMLFile(filename):
 
 def read_pressure(filename):
   doc = loadXMLFile(filename)
-  p=doc.findall("Pressure")
+  p=doc.find("Pressure")
   return p.get("Avg")
 
 def conf_to_xyz(filename):
